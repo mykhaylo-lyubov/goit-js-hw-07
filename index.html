@@ -3,43 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <ul id="categories">
-      <li class="item">
-        <h2>Животные</h2>
+    <h1 class="page-title">Welcome to my website</h1>
+    <img
+      class="hero-image"
+      src="https://images.pexels.com/photos/57416/cat-sweet-kitty-animals-57416.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=480"
+      alt="it's me"
+      width="320"
+    />
 
-        <ul>
-          <li>Кот</li>
-          <li>Хомяк</li>
-          <li>Лошадь</li>
-          <li>Попугай</li>
-        </ul>
+    <ul class="nav">
+      <li class="nav__item">
+        <a href="" class="nav__link">Portfolio</a>
       </li>
-      <li class="item">
-        <h2>Продукты</h2>
-
-        <ul>
-          <li>Хлеб</li>
-          <li>Петрушка</li>
-          <li>Творог</li>
-        </ul>
+      <li class="nav__item">
+        <a href="" class="nav__link nav__link--active">Blog</a>
       </li>
-      <li class="item">
-        <h2>Технологии</h2>
-
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Node</li>
-        </ul>
+      <li class="nav__item">
+        <a href="" class="nav__link">Contact</a>
       </li>
     </ul>
-    <ul id="ingredients"></ul>
-    <!-- <script src="./tasks/task-01.js" type="module"></script> -->
-    <script src="./tasks/task-02.js" type="module"></script>
+
+    <div id="root"></div>
+
+    <!-- <script src="./tasks/task-04.js" type="module"></script> -->
   </body>
 </html>
