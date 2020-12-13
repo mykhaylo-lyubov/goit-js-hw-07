@@ -32,6 +32,5 @@ const createList = (image) => {
 };
 
 const imagesToInsert = images.map((item) => createList(item));
-console.log(imagesToInsert);
 
 galleryRef.append(...imagesToInsert);

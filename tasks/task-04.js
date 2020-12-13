@@ -7,7 +7,6 @@ const btnIncrementRef = document.querySelector(
 );
 
 let counterValue = valueRef.textContent;
-console.log(counterValue);
 const increment = function (num) {
   return (num += 1);
 };
