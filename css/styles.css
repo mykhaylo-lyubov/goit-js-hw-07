@@ -13,3 +13,13 @@
 #validation-input.invalid {
   border-color: #f44336;
 }
+
+.parentBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.newBox {
+  display: block;
+}
