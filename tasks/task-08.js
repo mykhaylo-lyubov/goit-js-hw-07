@@ -32,12 +32,13 @@ const destroyBoxes = () => {
   newBoxesRef.forEach((box) => box.remove());
 };
 
-inputRef.addEventListener("change", (event) => {
-  createBoxes(event.target.value);
+inputRef.addEventListener("focus", (event) => {
+  btnRenderRef.addEventListener("click", () => {
+    createBoxes(event.target.value);
+    event.target.value = "";
+  });
 });
 
-inputRef.addEventListener("input", () => {
-  btnDestroyRef.addEventListener("click", () => {
-    destroyBoxes();
-  });
+btnDestroyRef.addEventListener("click", () => {
+  destroyBoxes();
 });
