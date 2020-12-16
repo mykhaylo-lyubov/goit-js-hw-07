@@ -13,7 +13,7 @@ const colorGenerator = () => {
   return color;
 };
 
-// Function to create new div-boxes
+//Function to create additional div-box
 const createBoxes = (amount) => {
   const containerToFillRef = document.createElement("div");
   containerToFillRef.classList.add("parentBox");
@@ -25,7 +25,7 @@ const createBoxes = (amount) => {
     newBoxRef.style.height = `${30 + i * 10}px`;
     containerToFillRef.append(newBoxRef);
   }
-  return containerToFillRef;
+  primaryContainer.append(containerToFillRef);
 };
 
 const destroyBoxes = () => {
@@ -34,7 +34,8 @@ const destroyBoxes = () => {
 
 inputRef.addEventListener("focus", (event) => {
   btnRenderRef.addEventListener("click", () => {
-    primaryContainer.append(createBoxes(event.target.value));
+    // primaryContainer.append(createBoxes(event.target.value));
+    createBoxes(event.target.value);
     event.target.value = "";
   });
 });
