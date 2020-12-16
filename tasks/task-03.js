@@ -16,22 +16,9 @@ const images = [
   },
 ];
 const galleryRef = document.querySelector("#gallery");
+galleryRef.classList.add("js-styles");
+const stringToInsertImg = images.map(
+  (item) => `<li><img src="${item.url}" alt="${item.alt}" width="50%"></li>`
+);
 
-const createList = (image) => {
-  const listItemEl = document.createElement("li");
-  const imgTags = document.createElement("img");
-
-  galleryRef.classList.add("js-styles");
-
-  imgTags.setAttribute("src", image.url);
-  imgTags.setAttribute("alt", image.alt);
-  imgTags.setAttribute("width", "50%");
-
-  listItemEl.append(imgTags);
-  //   console.log(listItemEl.toString());
-  return listItemEl;
-};
-
-const imagesToInsert = images.map((item) => createList(item));
-
-galleryRef.insertAdjacentHTML("afterbegin");
+galleryRef.insertAdjacentHTML("afterbegin", stringToInsertImg);
