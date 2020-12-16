@@ -6,14 +6,16 @@ const ingredients = [
   "Зелень",
   "Приправы",
 ];
+const ingredientsListRef = document.querySelector("#ingredients");
 
 const createIngredientsList = (product) => {
-  const ingredientsListRef = document.querySelector("#ingredients");
-  const list = document.createElement("li");
-  list.textContent = product;
-  ingredientsListRef.appendChild(list);
+  const listItem = document.createElement("li");
+  listItem.textContent = product;
+  return listItem;
 };
 
 const newIngredients = ingredients.map((product) =>
   createIngredientsList(product)
 );
+
+ingredientsListRef.append(...newIngredients);
