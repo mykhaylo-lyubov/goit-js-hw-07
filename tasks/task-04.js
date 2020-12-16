@@ -7,19 +7,25 @@ const btnIncrementRef = document.querySelector(
 );
 
 let counterValue = valueRef.textContent;
+
 const increment = function (num) {
   return (num += 1);
 };
+
 const decrement = function (num) {
   return (num -= 1);
 };
 
-btnDecrementRef.addEventListener("click", () => {
+const decrementBtnHandler = () => {
   counterValue = decrement(Number(counterValue));
-  return (valueRef.textContent = counterValue);
-});
+  valueRef.textContent = counterValue;
+};
 
-btnIncrementRef.addEventListener("click", () => {
+const incrementBtnHandler = () => {
   counterValue = increment(Number(counterValue));
-  return (valueRef.textContent = counterValue);
-});
+  valueRef.textContent = counterValue;
+};
+
+btnDecrementRef.addEventListener("click", decrementBtnHandler);
+
+btnIncrementRef.addEventListener("click", incrementBtnHandler);

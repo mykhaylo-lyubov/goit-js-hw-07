@@ -28,9 +28,11 @@ const createList = (image) => {
   imgTags.setAttribute("width", "50%");
 
   listItemEl.append(imgTags);
+  //   console.log(listItemEl.toString());
   return listItemEl;
 };
 
 const imagesToInsert = images.map((item) => createList(item));
+console.log(imagesToInsert);
 
-galleryRef.append(...imagesToInsert);
+galleryRef.insertAdjacentHTML("afterbegin");
