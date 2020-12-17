@@ -17,8 +17,24 @@ const images = [
 ];
 const galleryRef = document.querySelector("#gallery");
 galleryRef.classList.add("js-styles");
-const stringToInsertImg = images.map(
-  (item) => `<li><img src="${item.url}" alt="${item.alt}" width="50%"></li>`
+
+//========== via .map ================
+// const stringToInsertImg = images.map(
+//   (item) => `<li><img src="${item.url}" alt="${item.alt}" width="50%"></li>`
+// );
+
+// ============== via .map and .join  ================
+// const stringToInsertImg = images
+//   .map(
+//     (item) => `<li><img src="${item.url}" alt="${item.alt}" width="50%"></li>`
+//   )
+//   .join("");
+
+//=============== via .reduce ====================
+const stringToInsertImg = images.reduce(
+  (acc, item) =>
+    acc + `<li><img src="${item.url}" alt="${item.alt}" width="50%"></li>`,
+  ""
 );
 
 galleryRef.insertAdjacentHTML("afterbegin", stringToInsertImg);
